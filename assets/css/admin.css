@@ -1,0 +1,142 @@
+/*Login*/
+.main-admin{
+    height: 83vh;
+    background-color:  rgb(250, 225, 148);
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: center;
+}
+
+.main-admin h2{
+    color: rgba(3, 39, 111);
+    text-align: center;
+}
+
+.main-admin .login-box{
+    width: 30vw;
+    min-width: 300px;
+    margin: 0px auto;
+    height: 150px;
+    padding: 20px;
+    background-color: white;
+}
+
+.back-string{
+    margin-top: 30px;
+    text-align: center;
+}
+
+/*dashboard*/
+.main-dashboard{
+    min-height: 83vh;
+    background-color:  rgb(250, 225, 148);
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 20px;
+}
+
+.main-dashboard h2{
+    color: rgba(3, 39, 111);
+    text-align: center;
+}
+
+.main-dashboard .stats{
+    width: 90%;
+    margin: 20px auto;
+    min-height: 200px;
+    background-color: white;
+    color: rgba(3, 39, 111);
+    padding: 20px;
+}
+
+.main-dashboard .stats h3{
+    text-align: left;
+}
+
+.switch-box{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: minmax(100px auto);
+}
+
+.ownership-box{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: minmax(100px auto);
+}
+
+.changeOwner{
+    display: inline-block;
+    margin-top: 10px;
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.start{
+    display: inline-block;
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.stop{
+    display: inline-block;
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.disabled{
+    display: inline-block;
+    background-color: lightgray;
+    color: grey;
+    padding: 10px 20px;
+    cursor: not-allowed;
+}
+
+.beneficiary{
+    width: 90%;
+    margin: 20px auto;
+    border: 1px solid rgba(3, 39, 111);
+    padding: 20px;
+}
+
+/*Wrong PW*/
+
+.go-back-container{
+    text-align: center;
+}
+.go-back{
+    display: inline-block;
+    background-color: rgba(3, 39, 111);
+    color: white;
+    padding: 8px 25px;
+    cursor: pointer;
+    margin: 20px auto;
+}
+
+.burning-box{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.sale-stats{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media screen and (max-width: 600px){
+    .ownership-box{
+        display: initial;
+    }
+    .burning-box{
+        display: initial;
+    }
+    .sale-stats{
+        display: initial;
+    }
+}

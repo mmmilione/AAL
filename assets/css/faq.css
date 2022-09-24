@@ -1,0 +1,24 @@
+.faq-list{
+    background-color: rgba(3, 39, 111);
+    padding: 20px;
+    height: 77.1vh;
+    overflow-y: scroll;
+}
+.faq-list h1, p{
+    color: white;
+}
+
+.faq-list h4{
+    color: rgb(250, 225, 148);
+}
+
+.faq-list a{
+    color: rgb(250, 225, 148);
+    font-weight: bold;
+}
+
+.bscLink{
+    color: whitesmoke;
+    cursor: pointer;
+}
+

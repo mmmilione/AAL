@@ -1,0 +1,627 @@
+body{
+    margin: 0;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('../images/coinstack.jpg');
+    background-size: cover;
+}
+
+body a {
+    color: black;
+    text-decoration: none !important;
+}
+
+.divider{
+    height: 30px;
+}
+
+.center{
+    text-align: center;
+}
+
+.right{
+    text-align: right;
+}
+
+.error{
+    color: red !important;
+    font-weight: bold;
+}
+
+.bigIcon{
+    font-size: 40px;
+}
+
+.success{
+    color: green !important;
+    font-weight: bold;
+}
+
+.clickable{
+    cursor: pointer !important;
+}
+
+.show-success{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: center;
+    justify-items: center;
+    background-color: rgb(250, 225, 148);
+    color: rgba(3, 39, 111);
+    padding: 20px;
+}
+
+.coin-success{
+    width: 25%;
+    min-width: 250px;
+}
+
+.feedback-box{
+    padding-top: 20px;
+    min-height: 40px
+}
+
+.inprogress{
+    padding: 20px;
+    background-color: rgba(3, 39, 111);
+    color: white;
+}
+
+.fine-line{
+    height: 1px;
+    border-top: 1px solid rgba(3, 39, 111);
+    margin: 30px auto;
+}
+
+.hidden{
+    display: none !important;
+}
+
+#mob-lateral-menu{
+    display: none;
+    z-index: 4;
+    background-color: rgba(3, 39, 111);
+    position: absolute;
+    top: 5vh;
+    height: 0px;
+    width: 0px;
+    padding: 20px;
+    padding-top: 60px;
+    transition: all 0.8s ease;
+}
+
+.container{
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/*TOAST*/
+#toast{
+    display: none;
+    opacity: 0;
+    position: absolute;
+    bottom: 50px;
+    background-color: transparent;
+    transition: all 0.8s ease;
+}
+
+.active-toast{
+    display: block !important;
+    z-index: 50 !important;
+    position: absolute;
+    top: 50px !important;
+    right: 10vw;
+    opacity: 1 !important;
+    background-color: black !important;
+    height: 22px;
+    padding: 10px;
+    padding-right: 20vw;
+    transition: all 0.8s ease;
+}
+
+
+
+/*NAV*/
+.nav{
+    display: grid;
+    grid-template-columns: 3fr 3fr 2fr;
+    grid-template-rows: minmax(10vh, auto);
+    background-color: rgb(255, 255, 255);
+    z-index: 5;
+}
+
+.nav .connect{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: center;
+}
+
+.nav .connect p{
+    text-align: center;
+}
+
+.connectBTN{
+    padding: 10px 35px;
+    background-color:rgba(3, 39, 111);
+    cursor: pointer;
+    color: white;
+}
+
+.connectBTN:hover{
+    font-size: 16.5px;
+    transition: all 0.6s ease;
+}
+
+.wallet{
+    color: rgba(3, 39, 111);
+}
+
+.fa-check-circle{
+    color: green;
+}
+
+.nav .flags{
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+    align-content: center;
+    justify-content: center;
+    
+}
+
+#menu-btn-box{
+    display: none;
+}
+
+.nav .main-flag-box{
+    color: rgba(3, 39, 111);
+    cursor: pointer;
+    padding: 0px;
+    padding-right: 2vw;
+    display: inline-block;
+    text-align: right;
+}
+
+#invert{
+    display: inline-block;
+    transform: rotate(180deg);
+    position: relative;
+    bottom: 2px;
+}
+
+#invert-mob{
+    display: inline-block;
+    transform: rotate(180deg);
+    position: relative;
+    bottom: 2px;
+}
+
+.up{
+    transform: rotate(0deg) !important;
+    bottom: -4px !important;
+}
+
+.small-flag{
+    width: 20px;
+    height: 14px;
+}
+
+#lang-list{
+    display: none;
+    background-color: white;
+    color:rgb(14, 14, 63);
+    z-index: 5;
+    transition: all 0.6 ease;
+}
+
+.shown{
+    display: block !important;
+    position: absolute;
+    right: 0vw;
+    top: 10vh;
+    height: 60px !important;
+    width: 100px !important;
+    border: 1px solid lightgray;
+    padding: 30px;
+    transition: all 0.6 ease;
+}
+
+.nav .symbol{
+    margin: 15px;
+    margin-left: 7vw;
+    display: block;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+/*Certificate*/
+.smallCertificate{
+    width: 70px;
+    height: 50px;
+    margin: 90px auto !important;
+    display: block;
+    cursor: pointer;
+    transition: all 0.6s ease;
+}
+
+.smallCertificate:hover{
+    width: 73px;
+    height: 52px;
+    transition: all 0.6s ease;
+}
+
+.bigCertificate{
+    width: 90%;
+    margin: 20px auto !important;
+    display: block;
+}
+
+/*MODAL*/
+    #presale-modal-background,
+    #modal-background,
+    #airdrop-modal-background,
+    #scu-modal-background,
+    #certificate-modal-background,
+    #approval-modal-background{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 100%;
+        background-color: rgb(16, 52, 84, 0.9);
+        z-index: 10;
+        display: none;
+    }
+
+    .open-modal{
+        display: grid !important;
+        grid-template-columns: 1fr;
+        align-content: center;
+    }
+
+    .modal-content{
+        background-color: white;
+        min-height: 350px;
+        width: 350px;
+        color: rgba(3, 39, 111);
+        margin: auto;
+        border-radius: 10px;
+    }
+
+    .airdrop-modal-content{
+        background-color: rgb(250, 225, 148);
+        min-height: 400px;
+        width: 70%;
+        color: rgba(3, 39, 111);
+        margin: auto;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    .scu-modal-content{
+        background-color: rgb(250, 225, 148);
+        min-height: 400px;
+        width: 50%;
+        color: rgba(3, 39, 111);
+        margin: auto;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    .amountYouGet{
+        padding-right: 20px;
+        font-size: 20px;
+    }
+
+    .certificate-modal-content{
+        background-color: white;
+        min-height: 400px;
+        width: 50%;
+        color: rgba(3, 39, 111);
+        margin: auto;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    .airdrop-modal-content h1,
+    .scu-modal-content h1,
+    .certificate-modal-content h1{
+        color: rgba(3, 39, 111) !important;
+    }
+
+    .airdrop-modal-content p,
+    .scu-modal-content p{
+        color: rgba(3, 39, 111);
+    }
+
+    .airdrop-modal-body{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .airdrop-modal-body form,
+    .scu-modal-body form{
+        background-color: white;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    .claim-btn-in-form{
+        display: inline-block;
+        cursor: pointer;
+        padding: 10px 25px;
+        background-color: rgba(3, 39, 111);
+        color: white;
+        margin-top: 40px;
+        font-size: 18px;
+        transition: all 0.8s ease;
+    }
+
+    .claim-btn-in-form:hover{
+        font-size: 18.5px;
+        transition: all 0.8s ease;
+    }
+
+    .airdrop-modal-content h3,
+    .modal-content h3,
+    .certificate-modal-content h3,
+    .scu-modal-content h3{
+        text-align: right !important;
+        padding-right: 20px;
+        color:rgba(3, 39, 111) !important;
+        cursor: pointer;
+    }
+
+    .modal-body{
+        align-content: center;
+        justify-content: center;
+        padding: 0px 20px;
+    }
+
+    .modal-content h1{
+        text-align: center;
+        color:red;
+        font-size: 60px;
+    }
+
+    #alertMSG{
+        color:rgba(3, 39, 111);
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .modal-content .fa-window-close{
+        cursor: pointer;
+    }
+
+    .modal-btn{
+        background-color: rgba(3, 39, 111);
+        color: white;
+        padding: 10px 25px;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 500px){
+        .modal-content{
+            width: 90%;
+        }
+    }
+/**/
+
+/* spinner */
+.spinner {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin: 10px auto;
+  }
+  .spinner div {
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 8px solid transparent;
+    border-top-color: rgb(250, 225, 148);
+    border-radius: 50%;
+    animation: spinnerOne 1.2s linear infinite;
+  }
+  .spinner div:nth-child(2) {
+    border: 8px solid transparent;
+    border-bottom-color: rgb(250, 225, 148);
+    animation: spinnerTwo 1.2s linear infinite;
+  }
+  
+  @keyframes spinnerOne {
+    0% { transform: rotate(0deg); border-width: 10px; }
+    50% { transform: rotate(180deg); border-width: 1px; }
+    100% { transform: rotate(360deg); border-width: 10px; }
+  }
+  @keyframes spinnerTwo {
+    0% { transform: rotate(0deg); border-width: 1px; }
+    50% { transform: rotate(180deg); border-width: 10px; }
+    100% { transform: rotate(360deg); border-width: 1px; }
+}
+
+/*Forms*/
+.label{
+    color:rgb(14, 14, 63);
+    font-size: 12px;
+}
+
+input{
+    width: 90%;
+}
+
+/*Content*/
+.main{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: minmax(10px, auto);
+}
+
+/*Lateral Nav*/
+.lateral{
+    background-color: rgba(3, 39, 111, 0.85);
+    height: 82vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: center;
+    gap: 40px;
+    position: relative;
+}
+
+.lateral div{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.lateral a{
+    display: block;
+    width: 60%;
+    height: 20px;
+    background-color: white;
+    color:  rgba(3, 39, 111, 0.85);
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    transition: all 0.6s ease;
+}
+
+.lateral a:hover{
+    background-color: rgb(250, 225, 148);
+    font-size: 17px;
+    transition: all 0.6s ease;
+}
+
+/*FOOTER*/
+.footer{
+    height: 5vh;
+    padding-top:15px;
+    background-color: white;
+}
+
+.footer p {
+    color: rgb(14, 14, 63);
+    font-size: 12px;
+    text-align: center;
+    display: block;
+    margin: 0px auto;
+}
+
+@media screen and (max-width: 800px) {
+    body{
+       background-image: url('../images/coinstack_mob2.jpg');
+    }
+    .main{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .flags{
+        display: none !important;
+    }
+
+    .lateral{
+        display: none;
+    }
+
+    .divider{
+        height: 30px;
+    }
+
+    .nav{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: minmax(5vh, auto);
+        background-color: rgb(255, 255, 255);
+    }
+
+    .connect{
+        display: none !important;
+    }
+
+    .nav .symbol{
+        position: relative;
+        height: 40px;
+        width: 40px;
+    }
+
+    #menu-btn-box{
+        display: grid !important;
+        padding-right: 3vw;
+        justify-content: right;
+        align-content: center;
+    }
+
+    .menu-btn{
+        background-color: rgba(3, 39, 111);
+        color: white;
+        padding: 8px;
+        cursor: pointer;
+    }
+
+    .active{
+        display: block !important;
+        height: 95vh !important;
+        width: 100% !important;
+        transition: all 2s ease;
+    }
+
+    #mob-lateral-menu div{
+        margin-bottom: 20px;
+        padding-top: 15px;
+    }
+
+    #mob-lateral-menu a{
+        color: white;
+        text-decoration: none;
+    }
+
+    #mob-menu-lang-box{
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        padding-bottom: 15px;
+    }
+
+    #mob-lateral-menu .small-flag-mob{
+        width: 20px;
+        height: 14px;
+    }
+
+    .mob-flag-box{
+        cursor: pointer;
+        padding: 0px;
+        display: inline-block;
+    }
+
+    #mob-lang-options{
+        padding-left: 20px;
+    }
+
+    .bigCertificate{
+        width: 100%;
+        margin: 50px auto !important;
+        display: block;
+    }
+    
+}
+
+@media screen and (max-width: 982px){
+    .airdrop-modal-body{
+        display: initial !important;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .airdrop-modal-content,
+    .scu-modal-content,
+    .certificate-modal-content{
+        width: 85% !important;
+        margin: 30px auto !important;
+    }
+}
