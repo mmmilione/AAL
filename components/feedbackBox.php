@@ -2,3 +2,4 @@
     <p class="error center"></p>
     <p class="success center"></p>
 </div>
+<?php ?>

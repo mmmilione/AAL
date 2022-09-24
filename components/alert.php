@@ -1,3 +1,5 @@
+<?php ?>
+
 <div id = "modal-background">
     <div class="modal-content">
         <h3><i class="fas fa-window-close closer"></i></h3>
